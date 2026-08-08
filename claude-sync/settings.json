@@ -26,9 +26,20 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node -e \"try{const os=require('os'),p=require('path');const d=process.env.CLAUDE_CONFIG_DIR||p.join(os.homedir(),'.claude');process.stdout.write(require('fs').readFileSync(p.join(d,'terse-mode.md'),'utf8'))}catch(e){}\"",
+            "command": "node -e \"try{const os=require('os'),p=require('path');const d=process.env.CLAUDE_CONFIG_DIR||p.join(os.homedir(),'.claude');process.stdout.write(require('fs').readFileSync(p.join(d,'professional-mode.md'),'utf8'))}catch(e){}\"",
             "timeout": 5,
-            "statusMessage": "Loading terse mode"
+            "statusMessage": "Loading professional mode"
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"try{const os=require('os'),p=require('path');const d=process.env.CLAUDE_CONFIG_DIR||p.join(os.homedir(),'.claude');process.stdout.write(require('fs').readFileSync(p.join(d,'superdinq-mode.md'),'utf8'))}catch(e){}\"",
+            "timeout": 5,
+            "statusMessage": "Loading superdinq mode"
           }
         ]
       }
@@ -39,7 +50,17 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node -e \"process.stdout.write('TERSE MODE ACTIVE — terse, substance stays.')\"",
+            "command": "node -e \"process.stdout.write('PROFESSIONAL MODE ACTIVE — concise, substance stays.')\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"process.stdout.write('SUPERDINQ MODE ACTIVE — YAGNI, stdlib first, shortest diff.')\"",
             "timeout": 5
           }
         ]
@@ -53,23 +74,9 @@
   "enabledPlugins": {
     "playwright@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "caveman@caveman": true,
-    "ponytail@ponytail": true
+    "superpowers@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
-    "caveman": {
-      "source": {
-        "source": "github",
-        "repo": "JuliusBrussee/caveman"
-      }
-    },
-    "ponytail": {
-      "source": {
-        "source": "github",
-        "repo": "DietrichGebert/ponytail"
-      }
-    },
     "claude-plugins-official": {
       "source": {
         "source": "github",
