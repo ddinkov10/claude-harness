@@ -1,12 +1,10 @@
 {
   "mobile-mcp": {
     "args": [
-      "/c",
-      "npx",
       "-y",
       "@mobilenext/mobile-mcp@latest"
     ],
-    "command": "cmd",
+    "command": "npx",
     "env": {},
     "type": "stdio"
   }
