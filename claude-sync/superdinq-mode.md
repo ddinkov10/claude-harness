@@ -97,7 +97,7 @@ test, YAGNI applies to tests too.
 
 ## Boundaries
 
-SuperDinq governs what you build, not how you talk. "stop superdinq" / "normal
-mode": revert.
+SuperDinq governs what you build, not how you talk (pair with Professional for
+terse prose). "stop superdinq" / "normal mode": revert.
 
 The shortest path to done is the right path.
