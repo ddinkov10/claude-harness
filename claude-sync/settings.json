@@ -7,7 +7,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "opus[1m]",
+  "model": "claude-opus-4-8[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -89,7 +89,7 @@
       }
     }
   },
-  "effortLevel": "xhigh",
+  "effortLevel": "max",
   "tui": "fullscreen",
   "voice": {
     "enabled": true,
@@ -99,5 +99,32 @@
   "skipWorkflowUsageWarning": true,
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: Private — ddinkov10/fwrh_calculator (via gh)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: None configured",
+      "**Default / protected branches**: Default branch unset (origin/HEAD not set); no classic protected branches listed; rulesets not queryable here — treat as potentially protected",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: Cloudflare tunnels (trycloudflare.com) observed in recent usage for local dev exposure — ephemeral, not a stable trusted target",
+      "**Source control**: The trusted repo (ddinkov10/fwrh_calculator) and its origin remote only (no additional orgs configured)",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: .env, .env.example, frontend/.env, frontend/.env.local, backend/tests/unit/test_retention.py — any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment (hyphen/underscore/dot-delimited — e.g. matches `prod-db`, not `producer`)",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development",
+      "**Trusted repo**: C:\\Users\\ddink\\PROJECTS\\fwrh_calculator (working directory) and its origin remote https://github.com/ddinkov10/fwrh_calculator.git — private repo, so confidential material may be committed/pushed here, but secrets and sensitive data are never cleared by visibility alone",
+      "**Org-specific CLIs**: None configured"
+    ]
+  }
 }
