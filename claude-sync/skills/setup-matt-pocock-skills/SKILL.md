@@ -64,7 +64,7 @@ Offer **multi-context** — a root `CONTEXT-MAP.md` pointing to per-context `CON
 Show the user a draft of:
 
 - The `## Agent skills` block to add to whichever of `CLAUDE.md` / `AGENTS.md` is being edited (see step 4 for selection rules)
-- The contents of `docs/agents/issue-tracker.md`, `docs/agents/domain.md`, and `docs/agents/matt-triage-labels.md` (the last only when `matt-triage` is installed)
+- The contents of `docs/agents/issue-tracker.md`, `docs/agents/domain.md`, and `docs/agents/triage-labels.md` (the last only when `matt-triage` is installed)
 
 Let them edit before writing.
 
@@ -91,21 +91,21 @@ The block:
 
 ### Triage labels
 
-[one-line summary of the label vocabulary]. See `docs/agents/matt-triage-labels.md`.
+[one-line summary of the label vocabulary]. See `docs/agents/triage-labels.md`.
 
 ### Domain docs
 
 [one-line summary of layout — "single-context" or "multi-context"]. See `docs/agents/domain.md`.
 ```
 
-Include the `### Triage labels` sub-block, and write `docs/agents/matt-triage-labels.md`, only when `matt-triage` is installed and Section B ran. When it isn't, both are omitted.
+Include the `### Triage labels` sub-block, and write `docs/agents/triage-labels.md`, only when `matt-triage` is installed and Section B ran. When it isn't, both are omitted.
 
 Then write the docs files using the seed templates in this skill folder as a starting point:
 
 - [issue-tracker-github.md](./issue-tracker-github.md) — GitHub issue tracker
 - [issue-tracker-gitlab.md](./issue-tracker-gitlab.md) — GitLab issue tracker
 - [issue-tracker-local.md](./issue-tracker-local.md) — local-markdown issue tracker
-- [triage-labels.md](./matt-triage-labels.md) — label mapping (only if `matt-triage` is installed)
+- [triage-labels.md](./triage-labels.md) — label mapping (only if `matt-triage` is installed)
 - [domain.md](./domain.md) — domain doc consumer rules + layout
 
 For "other" issue trackers, write `docs/agents/issue-tracker.md` from scratch using the user's description.
