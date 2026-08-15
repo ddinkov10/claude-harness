@@ -51,6 +51,7 @@ Done when `upstream.sha` equals upstream head and every upstream delta is either
 | Strip the invocation flag | Delete any `disable-model-invocation: true` line. Every vendored skill is model-invocable; this is the whole point of vendoring them. |
 | Keep the local description | Never overwrite a local `description:` with upstream's. Local descriptions are rewritten into model-facing form — a trigger branch (`Use when …`) and a negative branch (`Not for …`) — because upstream writes human-facing one-liners for skills it expects you to type. If upstream changes a description's *meaning*, re-derive the local one from the new text in that same form. |
 | Keep the renames | Two skills are vendored under different names to avoid shadowing. Rename the directory **and** the `name:` frontmatter field. |
+| Repoint cross-references | Skills reference each other in prose (`/code-review`, `` `triage` ``). Rewrite every such reference to the vendored name in **all** files of the skill, not just `SKILL.md`. Leave label strings alone — `needs-triage`, `bug:triage`, and `triage-labels.md` are tracker vocabulary, not skill names. Missing this leaves an agent following `implement` into the built-in `/code-review` instead of the two-axis review the workflow expects. |
 | Vendor only the shipped trees | `skills/engineering/` and `skills/productivity/` only — these are what the plugin manifest shipped. |
 
 ### Renamed skills
