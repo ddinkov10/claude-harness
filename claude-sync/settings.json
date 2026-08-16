@@ -7,7 +7,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "claude-opus-4-8[1m]",
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -89,7 +89,6 @@
       }
     }
   },
-  "effortLevel": "max",
   "tui": "fullscreen",
   "voice": {
     "enabled": true,
@@ -99,7 +98,6 @@
   "skipWorkflowUsageWarning": true,
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true,
   "autoMode": {
     "environment": [
       "### Org-wide",
@@ -126,5 +124,6 @@
       "**Trusted repo**: C:\\Users\\ddink\\PROJECTS\\fwrh_calculator (working directory) and its origin remote https://github.com/ddinkov10/fwrh_calculator.git — private repo, so confidential material may be committed/pushed here, but secrets and sensitive data are never cleared by visibility alone",
       "**Org-specific CLIs**: None configured"
     ]
-  }
+  },
+  "voiceEnabled": true
 }
