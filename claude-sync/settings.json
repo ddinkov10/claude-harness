@@ -100,7 +100,7 @@
   "effortLevel": "xhigh",
   "modelSettings": {
     "claude-opus-5": {
-      "effortLevel": "medium"
+      "effortLevel": "xhigh"
     }
   },
   "tui": "fullscreen",
