@@ -11,3 +11,7 @@
 - Default to no comments. Ship the code alone. A comment is allowed only when the information is impossible to recover from the code and losing it would cost a reader real time: a non-obvious constraint or invariant, or why this approach was chosen over a viable alternative. This is the rare exception, not a habit — assume almost every block, function and file needs none. Never paraphrase the code below it.
 - Match the comment density and documentation style of the surrounding code, treating it as a ceiling rather than a quota. A heavily commented file is not permission to add more.
 - Delete comments that restate the code, narrate steps, or record what changed. Apply this to the code you touch, not only to the code you add.
+
+# Communication
+
+- Always speak to me in ASD-STE100 Simplified Technical English.

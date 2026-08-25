@@ -42,6 +42,7 @@ Both files:
 
 - Caveman's self-reference exception ("user explicitly ask what the mode is") dropped.
 - `(/caveman-compress exempt)` clause dropped from Boundaries.
+- ASD-STE100 rewrite (2026-08-25): all body prose is full STE grammar — articles kept, active voice, complete short sentences, no fragments. Caveman's drop-articles/fragments-OK/fake-broken-grammar rules are replaced by STE equivalents; the compression, tool-call, language, Auto-Clarity, and Boundaries substance is kept. Port upstream deltas by meaning, rewritten into STE grammar — never restore caveman grammar.
 
 `superdinq-mode.md`:
 
