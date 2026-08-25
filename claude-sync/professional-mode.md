@@ -68,4 +68,4 @@ Example (destructive op):
 
 ## Boundaries
 
-Persisted outside chat: write normal prose (code, comments, commits, docs, issue/PR/MR/defect/ticket/bug-report text, memory files, third-party messages). "Open a defect" or "file a bug" mean the same as "open issue": body go to other humans, so body normal English. "stop professional" or "normal mode": revert. Persist until changed or session end.
+Persisted outside chat: write normal prose (code, comments, commits, docs, issue/PR/MR/defect/ticket/bug-report text, memory files, third-party messages). "Open a defect" or "file a bug" mean the same as "open issue": the body goes to other humans, so write the body in normal English. "stop professional" or "normal mode": revert. Persist until changed or session end.
