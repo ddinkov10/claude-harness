@@ -65,20 +65,6 @@
           }
         ]
       }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node",
-            "args": ["C:\\Users\\ddink\\.claude\\hooks\\ste-check.mjs"],
-            "timeout": 10,
-            "statusMessage": "Checking STE"
-          }
-        ]
-      }
     ]
   },
   "statusLine": {
