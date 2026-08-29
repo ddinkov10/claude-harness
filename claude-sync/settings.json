@@ -75,7 +75,8 @@
     "playwright@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "eli5@claude-community": true
+    "eli5@claude-community": true,
+    "dinq-harness@dinq": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -94,6 +95,12 @@
       "source": {
         "source": "github",
         "repo": "anthropics/claude-plugins-community"
+      }
+    },
+    "dinq": {
+      "source": {
+        "source": "github",
+        "repo": "ddinkov10/dinq-harness"
       }
     }
   },
