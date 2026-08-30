@@ -75,8 +75,9 @@
     "playwright@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "eli5@claude-community": true,
-    "dinq-harness@dinq": false
+    "eli5@claude-community": false,
+    "dinq-harness@dinq": false,
+    "cloudflare@cloudflare": false
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -101,6 +102,12 @@
       "source": {
         "source": "github",
         "repo": "ddinkov10/dinq-harness"
+      }
+    },
+    "cloudflare": {
+      "source": {
+        "source": "github",
+        "repo": "cloudflare/skills"
       }
     }
   },
