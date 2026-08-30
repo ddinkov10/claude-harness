@@ -76,7 +76,7 @@
     "context7@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "eli5@claude-community": true,
-    "dinq-harness@dinq": true
+    "dinq-harness@dinq": false
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
