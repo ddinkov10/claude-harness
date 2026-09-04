@@ -35,6 +35,8 @@ skills/
 agents/
 plugins.list
 statusline/
+professional-mode.md
+superdinq-mode.md
 EOF
 
 # 5. Bootstrap: register plugin marketplaces + install plugins (idempotent — re-run anytime)
@@ -69,6 +71,8 @@ skills/
 agents/
 plugins.list
 statusline/
+professional-mode.md
+superdinq-mode.md
 EOF
 
 # Bootstrap FIRST on Windows: patches claude-sync for MSYS md5sum (see caveats),
