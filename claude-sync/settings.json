@@ -125,7 +125,7 @@
   },
   "tui": "fullscreen",
   "voice": {
-    "enabled": false,
+    "enabled": true,
     "mode": "hold"
   },
   "skipDangerousModePermissionPrompt": true,
@@ -159,5 +159,5 @@
       "**Org-specific CLIs**: None configured"
     ]
   },
-  "voiceEnabled": false
+  "voiceEnabled": true
 }
