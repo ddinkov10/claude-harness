@@ -20,6 +20,10 @@ cat "$SYNC/CLAUDE.md" "$SYNC/professional-mode.md" "$SYNC/superdinq-mode.md" >"$
 cp -rf "$SYNC/skills" "$CLAUDE_DIR/"
 if [[ -d "$SYNC/agents" ]]; then cp -rf "$SYNC/agents" "$CLAUDE_DIR/"; fi
 
+[[ -s "$HOME/.claude.json" ]] || echo '{}' >"$HOME/.claude.json"
+jq --slurpfile s "$SYNC/mcp-servers.json" '.mcpServers = $s[0]' "$HOME/.claude.json" >"$HOME/.claude.json.tmp"
+mv -f "$HOME/.claude.json.tmp" "$HOME/.claude.json"
+
 # The synced hooks drive the local claude-sync loop and the mode banners; on the
 # web this script is the sync, and the modes are appended to CLAUDE.md above.
 # `claude plugin install` below rewrites enabledPlugins, so settings go first.
