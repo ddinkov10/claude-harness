@@ -89,6 +89,19 @@ Windows caveats:
 - No symlinks needed: `bootstrap.sh` installs `~/.local/bin/claude-sync` as a tiny exec shim (works without Developer Mode, never goes stale, and `claude-sync update` works from PATH). It exists purely for typing `claude-sync` in a terminal.
 - Upstream claude-sync has two silent Windows bugs, both fixed in our private fork: (1) MSYS `md5sum` emits a binary marker (`hash *./file`) that breaks checksum parsing — sync reports "Everything in sync" while transferring **nothing**; (2) native `jq.exe` emits CRLF line endings — the trailing `\r` empties the enabledPlugins intersection, so `plugins.list` gets regenerated wrong (drops installed plugins) and syncs that upstream. `claude-sync update` pulls from the fork, so the fixes survive updates.
 
+## Claude Code on the web
+
+Web sessions run in a fresh container, so there is no claude-sync install there. The environment's setup script (Environment settings on claude.ai) is only these two lines:
+
+```bash
+git clone https://github.com/ddinkov10/claude-harness.git /opt/claude-harness
+/opt/claude-harness/web-session-start.sh
+```
+
+`web-session-start.sh` pulls the repo, writes `~/.claude/CLAUDE.md` (with both mode files appended), `skills/`, `agents/`, and a `settings.json` whose only hook runs the script itself again at every session start. It then runs `install-plugins.sh`, so a marketplace or plugin added to the repo after the environment snapshot was built is still installed. It logs to `~/.claude/plugin-bootstrap.log` and prints nothing.
+
+After changing the setup script, rebuild the environment snapshot on claude.ai so new sessions start from the current `HEAD`. A private marketplace (`dinq`) needs a git credential in the container; without one its add fails with a warning and the rest still install.
+
 ## Daily use
 
 Sync runs automatically at every Claude Code session start (SessionStart hook in the synced `settings.json`). Manual commands:
