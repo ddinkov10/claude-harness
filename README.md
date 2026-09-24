@@ -39,11 +39,10 @@ professional-mode.md
 superdinq-mode.md
 EOF
 
-# 5. Bootstrap: register plugin marketplaces + install plugins (idempotent — re-run anytime)
+# 5. Bootstrap: first sync (pulls harness config, including the SessionStart
+# auto-sync hook), then register plugin marketplaces + install plugins
+# (idempotent — re-run anytime)
 ~/claude-harness/bootstrap.sh
-
-# 6. First sync (pulls harness config, including the SessionStart auto-sync hook)
-PATH="/opt/homebrew/bin:$PATH" claude-sync sync
 ```
 
 ### Windows
@@ -75,10 +74,9 @@ professional-mode.md
 superdinq-mode.md
 EOF
 
-# Bootstrap: register plugin marketplaces + install plugins (idempotent — re-run anytime)
+# Bootstrap: first sync, then register plugin marketplaces + install plugins
+# (idempotent — re-run anytime)
 ~/claude-harness/bootstrap.sh
-
-claude-sync sync
 ```
 
 Windows caveats:

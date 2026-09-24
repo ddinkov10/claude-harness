@@ -19,7 +19,8 @@ command -v claude >/dev/null || { echo "error: claude CLI is required" >&2; exit
 SHIM='#!/usr/bin/env bash
 exec "$HOME/.local/share/claude-sync/claude-sync" "$@"'
 if [[ ! -f "$SYNC_SCRIPT" ]]; then
-    echo "warning: $SYNC_SCRIPT not found — install claude-sync first (see README)" >&2
+    echo "error: $SYNC_SCRIPT not found — install claude-sync first (see README)" >&2
+    exit 1
 fi
 mkdir -p "$(dirname "$SYNC_BIN")"
 if [[ ! -f "$SYNC_BIN" ]] || [[ "$(cat "$SYNC_BIN" 2>/dev/null)" != "$SHIM" ]]; then
@@ -31,7 +32,14 @@ else
     echo "ok: $SYNC_BIN current"
 fi
 
-# --- 2. Marketplaces + plugins --------------------------------------------
+# --- 2. Sync ---------------------------------------------------------------
+# Must run before any plugin install: `claude plugin install` creates a local
+# settings.json, and a first sync that finds both it and the harness copy (with
+# no common base) stops on a conflict whose `fix` would push the local one.
+# The PATH prefix gives macOS the Homebrew bash 4 that claude-sync needs.
+PATH="/opt/homebrew/bin:$PATH" "$SYNC_SCRIPT" sync
+
+# --- 3. Marketplaces + plugins --------------------------------------------
 # claude-sync only auto-installs plugins newly added by a sync merge and never
 # retries failures, so this full-list pass is the recovery path.
 "$SCRIPT_DIR/install-plugins.sh"
