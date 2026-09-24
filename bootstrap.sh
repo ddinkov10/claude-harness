@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Prepare this machine for claude-harness sync. Idempotent — re-run anytime,
-# especially after `claude-sync update` (re-applies the Windows patch) or after
-# adding a marketplace to claude-sync/settings.json.
+# especially after adding a marketplace to claude-sync/settings.json.
 set -euo pipefail
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
