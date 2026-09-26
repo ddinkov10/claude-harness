@@ -78,7 +78,8 @@
     "context7@claude-plugins-official": true,
     "dinq-harness@dinq": false,
     "cloudflare@cloudflare": false,
-    "superpowers@superpowers-marketplace": true
+    "superpowers@superpowers-marketplace": true,
+    "engineering@synced": false
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -121,6 +122,7 @@
       "effortLevel": "xhigh"
     }
   },
+  "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "voice": {
     "enabled": true,
@@ -130,7 +132,6 @@
   "skipWorkflowUsageWarning": true,
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
-  "promptSuggestionEnabled": false,
   "autoMode": {
     "environment": [
       "### Org-wide",
