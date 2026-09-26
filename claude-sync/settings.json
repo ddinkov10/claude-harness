@@ -5,6 +5,9 @@
     "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1"
   },
   "permissions": {
+    "allow": [
+      "Bash(gh pr merge:*)"
+    ],
     "defaultMode": "auto"
   },
   "hooks": {
