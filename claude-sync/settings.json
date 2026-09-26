@@ -78,9 +78,9 @@
     "context7@claude-plugins-official": true,
     "dinq-harness@dinq": false,
     "cloudflare@cloudflare": false,
-    "superpowers@superpowers-marketplace": true,
-    "engineering@synced": false
+    "superpowers@superpowers-marketplace": true
   },
+  "syncClaudeAiPlugins": false,
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
       "source": {
