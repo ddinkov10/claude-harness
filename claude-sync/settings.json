@@ -76,7 +76,6 @@
   "enabledPlugins": {
     "playwright@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
     "dinq-harness@dinq": false,
     "cloudflare@cloudflare": false,
     "superpowers@superpowers-marketplace": true
