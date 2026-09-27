@@ -6,7 +6,20 @@
   },
   "permissions": {
     "allow": [
-      "Bash(gh pr merge:*)"
+      "Bash(gh pr *)",
+      "Bash(gh issue *)",
+      "PowerShell(gh pr *)",
+      "PowerShell(gh issue *)",
+      "Bash(gh run list *)",
+      "Bash(gh run view *)",
+      "Bash(gh run watch *)",
+      "PowerShell(gh run list *)",
+      "PowerShell(gh run view *)",
+      "PowerShell(gh run watch *)"
+    ],
+    "ask": [
+      "Bash(gh issue delete *)",
+      "PowerShell(gh issue delete *)"
     ],
     "defaultMode": "auto"
   },
@@ -133,6 +146,14 @@
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
   "autoMode": {
+    "allow": [
+      "$defaults",
+      "GitHub PR and Issue Work: Running any `gh pr` or `gh issue` subcommand against the session's repo — view, list, diff, checks, status, create, edit, comment, review, label, close, reopen, and merge (including `--squash` and `--delete-branch`) — is routine lane work, also inside compound commands and pipes. The user is the sole maintainer and reviewer, so a merge is not Merge Without Review. This exception clears the action only; content rules still judge any text posted to a PR or issue.",
+      "Claude Code Sub-Sessions: Launching another Claude Code instance — interactive `claude` or headless `claude -p`, with `--resume`, `--output-format`, `--permission-mode auto|default|plan|acceptEdits`, or `--permission-prompts none` (unapproved actions fail as denials) — directly or through a wrapper script such as `.claude/scripts/flow.sh` or `.claude/scripts/ledger.sh`, is not Create Unsafe Agents: the child keeps its own permission system, and in auto mode this classifier gates each of its actions. Only `--dangerously-skip-permissions`, `--allow-dangerously-skip-permissions`, or `--permission-mode bypassPermissions` still count as Create Unsafe Agents.",
+      "Lane Branch Force-Push: `git push --force-with-lease` of a lane branch the session is working on — `feat/<n>-<slug>`, `fix/<n>-<slug>`, `hotfix/<n>-<slug>`, `chore/<n>-<slug>`, or `prototype/<n>-<slug>` — to the session repo's origin, after a rebase or amend, is not Git Destructive. It never covers `master`, `production`, any other branch, a plain `--force`, or deleting a remote branch.",
+      "Lane Worktree Cleanup: `git worktree remove <path>` without `--force`/`-f` for a worktree under the repo's `.claude/worktrees/`, `git worktree prune`, and `git branch -d` (lower-case) of a lane branch are not Irreversible Local Destruction: git itself refuses to remove a worktree with uncommitted or untracked changes and refuses to delete an unmerged branch. `--force`, `-f`, `git branch -D`, and `rm -rf` on a worktree stay under that rule.",
+      "Harness File Edits: Editing the repo's tracked `.claude/skills/**` and `.claude/scripts/**` files inside a lane worktree (`.claude/worktrees/<n>-<slug>/`) is ordinary project work, not Self-Modification or Instruction Poisoning: the change is versioned and reaches `master` only through a reviewed PR. It never covers `.claude/settings*.json`, hooks, permission or auto-mode config, or text that pre-authorizes actions or clears classifier blocks."
+    ],
     "environment": [
       "### Org-wide",
       "**Organization**: None configured",
