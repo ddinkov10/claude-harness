@@ -91,7 +91,8 @@
     "context7@claude-plugins-official": true,
     "dinq-harness@dinq": false,
     "cloudflare@cloudflare": false,
-    "superpowers@superpowers-marketplace": true
+    "superpowers@superpowers-marketplace": true,
+    "visual-explainer@visual-explainer-marketplace": true
   },
   "syncClaudeAiPlugins": false,
   "extraKnownMarketplaces": {
@@ -117,6 +118,12 @@
       "source": {
         "source": "github",
         "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "visual-explainer-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "nicobailon/visual-explainer"
       }
     }
   },
