@@ -3,7 +3,7 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
     "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
-    "CLAUDE_CODE_PLUGIN_DIRS": "~/Dinq/PROJECTS/fwrh_calculator/.claude/worktrees/403-show-the-agent-sessions-and/.claude/agent-flow/mod"
+    "CLAUDE_CODE_PLUGIN_DIRS": "~/Dinq/PROJECTS/fwrh_calculator/.claude/agent-flow/mod"
   },
   "permissions": {
     "allow": [
