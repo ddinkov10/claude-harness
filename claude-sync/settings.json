@@ -118,7 +118,8 @@
       "source": {
         "source": "github",
         "repo": "obra/superpowers-marketplace"
-      }
+      },
+      "autoUpdate": true
     },
     "visual-explainer-marketplace": {
       "source": {
