@@ -1,4 +1,5 @@
 {
+  "syncClaudeAiPlugins": false,
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
@@ -94,7 +95,6 @@
     "superpowers@superpowers-marketplace": true,
     "visual-explainer@visual-explainer-marketplace": true
   },
-  "syncClaudeAiPlugins": false,
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
       "source": {
