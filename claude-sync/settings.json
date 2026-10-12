@@ -93,7 +93,8 @@
     "dinq-harness@dinq": false,
     "cloudflare@cloudflare": false,
     "superpowers@superpowers-marketplace": true,
-    "visual-explainer@visual-explainer-marketplace": true
+    "visual-explainer@visual-explainer-marketplace": true,
+    "celetis@celetis": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -125,6 +126,12 @@
       "source": {
         "source": "github",
         "repo": "nicobailon/visual-explainer"
+      }
+    },
+    "celetis": {
+      "source": {
+        "source": "github",
+        "repo": "ddinkov10/celetis"
       }
     }
   },
