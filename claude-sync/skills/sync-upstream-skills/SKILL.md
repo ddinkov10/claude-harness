@@ -36,7 +36,7 @@ Both files:
 
 - Frontmatter `name`/`description` renamed (`professional` / `superdinq`); mode name renamed throughout the body, including deactivation phrases ("stop professional" / "stop superdinq").
 - `PROFESSIONAL MODE ACTIVE` / `SUPERDINQ MODE ACTIVE` line added at top of body.
-- Intensity levels removed: no level table, no default/switch lines, no per-level examples. Only the **full** level's behavior is kept, as a `## Behavior` section with full-level examples.
+- Intensity levels removed: no level table, no default/switch lines, no per-level examples. Only the **full** level's behavior is kept. In `professional-mode.md` it is a `## Behavior` section with full-level examples; `superdinq-mode.md` has no such section, because ponytail's full level is only "The rules above".
 
 `professional-mode.md`:
 
@@ -46,6 +46,5 @@ Both files:
 
 `superdinq-mode.md`:
 
-- `ponytail:` corner-cut comment marker renamed to `superdinq:`.
-- "(pair with Caveman for terse prose)" dropped from Boundaries.
+- `shortcut:` corner-cut comment marker (formerly `ponytail:`) renamed to `superdinq:`.
 - `argument-hint` and `license` frontmatter dropped.

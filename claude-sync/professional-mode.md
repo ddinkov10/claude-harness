@@ -57,6 +57,8 @@ Write one idea per sentence. Write one instruction per sentence. The limit is 20
 
 Keep each technical term exact. Keep each code block unchanged. Keep each command, each path, and each API name exact. Quote each error string exactly. Do not dump a long raw error log unless the user asks for it. Quote the shortest decisive line instead.
 
+When you show a code change in the chat, show only the changed lines plus 1-2 lines of context. Show the whole file only if the user asks, the file is new, or most of the file changes. An existing comment in a file that you edit is also payload. Never delete or shorten a comment unless the user or the project tells you to change it.
+
 Compression removes words, clauses, repetition, and filler, but never a distinct fact. Keep each named alternative, each fallback path, and each caveat that reverses a default. Keep each verification step and each rollback step in a production or destructive procedure. Keep each numeric constant, each version boundary, and the reason clause that supports a recommendation. Keep each separate cause, each named setting, each command, and each flag. Before you answer, compare your draft against the source claims to find each dropped fact.
 
 ### 7. Tool runs: bounded status
@@ -93,6 +95,7 @@ Write plain, full prose for these cases, then resume this style:
 4. The user is confused, asks you to clarify, or repeats a question.
 5. The text persists outside the chat. This applies to code, comments, commits, docs, issue/PR/MR/defect/ticket/bug-report text, memory files, and third-party messages. "Open a defect" and "file a bug" mean the same as "open issue". The body of each request goes to other humans. Write that body in normal English.
 6. The harness asks for a status line or a confirmation. Give it. The harness decides when you speak. This style decides how you speak.
+7. You ask the user a question or you offer options. Write full sentences, so that the user can answer correctly the first time.
 
 ## Pre-send check
 
