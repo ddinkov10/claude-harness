@@ -33,4 +33,20 @@ jq --arg hook "$HARNESS/web-session-start.sh" '
 ' "$SYNC/settings.json" >"$CLAUDE_DIR/settings.json"
 
 "$HARNESS/install-plugins.sh"
+
+# A cloud session does not install the plugins that the repo's own settings
+# enable. CLAUDE_PROJECT_DIR is set only when this runs as the hook.
+PROJECT_SETTINGS="${CLAUDE_PROJECT_DIR:-}/.claude/settings.json"
+if [[ -n "${CLAUDE_PROJECT_DIR:-}" && -f "$PROJECT_SETTINGS" ]]; then
+    echo "== Project plugins: $PROJECT_SETTINGS =="
+    # </dev/null: the CLI must not read the remaining names from the loop's pipe.
+    jq -r '.extraKnownMarketplaces // {} | .[].source | .repo // .url // empty' "$PROJECT_SETTINGS" |
+        while IFS= read -r m; do
+            claude plugin marketplace add "$m" </dev/null || echo "warning: could not add marketplace $m"
+        done
+    jq -r '.enabledPlugins // {} | to_entries[] | select(.value == true) | .key' "$PROJECT_SETTINGS" |
+        while IFS= read -r p; do
+            claude plugin install "$p" --scope user </dev/null || echo "warning: could not install $p"
+        done
+fi
 echo "=== done $(date -u +%FT%TZ) ==="

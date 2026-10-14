@@ -95,7 +95,7 @@ git clone https://github.com/ddinkov10/claude-harness.git /opt/claude-harness
 /opt/claude-harness/web-session-start.sh
 ```
 
-`web-session-start.sh` pulls the repo, writes `~/.claude/CLAUDE.md` (with both mode files appended), `skills/`, `agents/`, and a `settings.json` whose only hook runs the script itself again at every session start. It then runs `install-plugins.sh`, so a marketplace or plugin added to the repo after the environment snapshot was built is still installed. It logs to `~/.claude/plugin-bootstrap.log` and prints nothing.
+`web-session-start.sh` pulls the repo, writes `~/.claude/CLAUDE.md` (with both mode files appended), `skills/`, `agents/`, and a `settings.json` whose only hook runs the script itself again at every session start. It then runs `install-plugins.sh`, so a marketplace or plugin added to the repo after the environment snapshot was built is still installed. At each session start it also installs the plugins (and their marketplaces) that the session's own repo enables in its `.claude/settings.json`, because a cloud session does not install them; a project needs no cloud hook of its own. It logs to `~/.claude/plugin-bootstrap.log` and prints nothing.
 
 The environment snapshot rebuilds on its own when the setup script or allowed network hosts change, and about every 7 days; until then, the hook adds new skills but never removes deleted ones. A private marketplace (`dinq`) needs a git credential in the container; without one its add fails with a warning and the rest still install.
 
