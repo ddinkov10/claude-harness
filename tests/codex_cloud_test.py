@@ -43,6 +43,9 @@ class CloudSetupTest(unittest.TestCase):
         source = ROOT / "codex-cloud-setup.sh"
         if source.exists():
             shutil.copy2(source, self.harness / source.name)
+        config_writer = ROOT / "codex-cloud-config.py"
+        if config_writer.exists():
+            shutil.copy2(config_writer, self.harness / config_writer.name)
         for name in ["celetis", "superpowers"]:
             bundle = self.root / "plugins" / name
             (bundle / "skills" / "example").mkdir(parents=True)
@@ -64,6 +67,9 @@ if args[:2] == ['plugin', 'add']:
     print(json.dumps({'pluginId': args[2], 'installedPath': path}))
 elif args[:1] == ['plugin']:
     pass
+elif args[:3] == ['mcp', 'add', 'context7']:
+    print('interactive OAuth is unavailable during setup', file=sys.stderr)
+    sys.exit(1)
 else:
     os.execv(os.environ['REAL_CODEX'], [os.environ['REAL_CODEX'], *args])
 ''')

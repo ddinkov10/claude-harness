@@ -107,7 +107,7 @@ The installer adds Celetis from `main` and Superpowers from `v7.0.0`, the versio
 
 At startup, the script refreshes both Git marketplaces and installs their current packages. It reads the returned `installedPath` values. It exposes the complete plugin packages through ignored links under the project's `.agents/skills/`, so their relative references still resolve. The personal skill links use the shared source directories. Deleted source skills do not leave stale copies. The script refuses to replace a tracked path or a normal file or directory at a link destination.
 
-The script writes `AGENTS.md` in the active `CODEX_HOME`, or `~/.codex` when unset, from the shared instructions and both mode files. It configures Context7 and headless, isolated Playwright through `codex mcp add`. Other CLI configuration stays in place. Run it only in the dedicated cloud environment; it manages that environment's global `AGENTS.md` and those two MCP entries.
+The script writes `AGENTS.md` in the active `CODEX_HOME`, or `~/.codex` when unset, from the shared instructions and both mode files. It configures Context7 and headless, isolated Playwright through the documented [app-server `config/batchWrite` operation](https://learn.chatgpt.com/docs/app-server#config-rpc-examples-for-app-settings). This writes both entries atomically without starting an OAuth login or a model turn. `codex mcp add` can start an interactive OAuth flow, which blocks unattended setup. Complete any required service login through the active client's supported connection controls. Other CLI configuration stays in place. Run the script only in the dedicated cloud environment; it manages that environment's global `AGENTS.md` and those two MCP entries.
 
 ### Environment settings
 

@@ -108,8 +108,7 @@ cat "$HARNESS/claude-sync/CLAUDE.md" \
     "$HARNESS/claude-sync/professional-mode.md" \
     "$HARNESS/claude-sync/superdinq-mode.md" >"$CODEX_DIR/AGENTS.md"
 
-codex mcp add context7 --url https://mcp.context7.com/mcp
-codex mcp add playwright -- "$TOOLS/node_modules/.bin/playwright-mcp" --headless --isolated --browser chromium
+python3 "$HARNESS/codex-cloud-config.py" "$TOOLS/node_modules/.bin/playwright-mcp"
 
 printf 'codex-cloud: ready for %s\n' "$PROJECT"
 printf '%s\n' 'codex-cloud: check the active cloud skill catalog and MCP tools before lane work'
