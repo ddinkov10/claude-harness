@@ -1,6 +1,6 @@
 # claude-harness
 
-Claude Code harness synced across machines via claude-sync (git mode) — installed from our **private fork** [ddinkov10/claude-sync](https://github.com/ddinkov10/claude-sync) of [baptisterajaut/claude-sync](https://github.com/baptisterajaut/claude-sync), which carries Windows/MSYS fixes upstream lacks. Synced content lives in [`claude-sync/`](claude-sync/): `CLAUDE.md`, `settings.json`, `skills/`, `statusline/`, `plugins.list`.
+Shared harness for Claude Code and [Codex Cloud](#codex-cloud). Claude Code syncs across machines via claude-sync (git mode) — installed from our **private fork** [ddinkov10/claude-sync](https://github.com/ddinkov10/claude-sync) of [baptisterajaut/claude-sync](https://github.com/baptisterajaut/claude-sync), which carries Windows/MSYS fixes upstream lacks. Synced content lives in [`claude-sync/`](claude-sync/): `CLAUDE.md`, `settings.json`, `skills/`, `statusline/`, `plugins.list`.
 
 ## New machine setup
 

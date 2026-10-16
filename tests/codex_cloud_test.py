@@ -236,12 +236,17 @@ else:
             (self.bin / name).symlink_to(shutil.which(name))
         self.executable("uname", "#!/bin/bash\necho Linux\n")
         self.executable("id", "#!/bin/bash\necho 1000\n")
-        self.executable("sudo", '#!/bin/bash\nshift\nexport TEST_SUDO=1\nexec "$@"\n')
-        self.executable("npm", '''#!/bin/bash
-if [[ "$*" == *" -g "* ]]; then
-    [[ "${TEST_SUDO:-}" == 1 ]] || { echo EACCES >&2; exit 1; }
-    cp "$TEST_CODEX_TEMPLATE" "$TEST_BIN/codex"
-fi
+        self.executable("sudo", '#!/bin/bash\nshift\nexport TEST_SUDO=1\nexport PATH=/nonexistent\nexec "$@"\n')
+        self.executable("npm", '''#!/usr/bin/env node
+const fs = require('node:fs');
+if (process.argv.includes('-g')) {
+    if (process.env.TEST_SUDO !== '1') {
+        console.error('EACCES');
+        process.exit(1);
+    }
+    fs.copyFileSync(process.env.TEST_CODEX_TEMPLATE, process.env.TEST_BIN + '/codex');
+    fs.chmodSync(process.env.TEST_BIN + '/codex', 0o755);
+}
 ''')
         playwright = self.tools / "node_modules/.bin/playwright"
         playwright.write_text("#!/bin/bash\nexit 0\n")

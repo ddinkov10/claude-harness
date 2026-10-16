@@ -33,7 +33,7 @@ if [[ "$MODE" == install ]]; then
         if [[ "$(id -u)" == 0 ]]; then
             npm install -g @openai/codex@0.162.1
         else
-            sudo -n "$(command -v npm)" install -g @openai/codex@0.162.1
+            sudo -n "$(command -v node)" "$(command -v npm)" install -g @openai/codex@0.162.1
         fi
     fi
     if ! command -v uv >/dev/null; then
