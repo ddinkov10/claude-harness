@@ -47,8 +47,10 @@ Both steps. Source review is not verification — the quiz breaks in ways that o
 
 **1. Structural check.**
 
+Resolve `<skill-base-dir>` from the loaded `SKILL.md` path.
+
 ```bash
-python3 ~/.claude/skills/explain-diff-html/check.py <file>
+python3 <skill-base-dir>/check.py <file>
 ```
 
 Catches the defects that survive a source read: a duplicate `id` (a `<h2 id="quiz">` anchor and a `<div id="quiz">` mount make `getElementById` return the heading, so questions render inside the title and the container stays empty), a script looking up an id no element has (one null dereference at the top of an IIFE kills every feature below it), and a missing `<meta charset="utf-8">` (em dashes and arrows arrive as mojibake).
