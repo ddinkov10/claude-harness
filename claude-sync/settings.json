@@ -16,11 +16,29 @@
       "Bash(gh run watch *)",
       "PowerShell(gh run list *)",
       "PowerShell(gh run view *)",
-      "PowerShell(gh run watch *)"
+      "PowerShell(gh run watch *)",
+      "mcp__ccd_session__start_session",
+      "Bash(pytest *)",
+      "Bash(ruff check *)",
+      "Bash(mypy *)",
+      "Bash(black *)",
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(git fetch *)",
+      "Bash(gh label list *)",
+      "Bash(gh repo view *)",
+      "Bash(scripts/celetis --agent claude next-step *)",
+      "Bash(scripts/celetis --agent claude worktree *)",
+      "mcp__ccd_session_mgmt__list_sessions",
+      "mcp__ccd_session_mgmt__get_session",
+      "SendMessage",
+      "Bash(gh label create *)"
     ],
     "ask": [
       "Bash(gh issue delete *)",
-      "PowerShell(gh issue delete *)"
+      "PowerShell(gh issue delete *)",
+      "Bash(scripts/celetis --agent claude worktree --remove *)"
     ],
     "defaultMode": "auto"
   },
