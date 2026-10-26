@@ -3,7 +3,6 @@
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
-    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
     "CAP_EFFORT_BIAS": "1"
   },
   "permissions": {
@@ -273,7 +272,6 @@
     "playwright@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "dinq-harness@dinq": false,
-    "cloudflare@cloudflare": false,
     "superpowers@superpowers-marketplace": true,
     "visual-explainer@visual-explainer-marketplace": true,
     "celetis@celetis": true
@@ -289,12 +287,6 @@
       "source": {
         "source": "github",
         "repo": "ddinkov10/dinq-harness"
-      }
-    },
-    "cloudflare": {
-      "source": {
-        "source": "github",
-        "repo": "cloudflare/skills"
       }
     },
     "superpowers-marketplace": {
@@ -376,6 +368,5 @@
       "**Trusted repo**: C:\\Users\\ddink\\PROJECTS\\fwrh_calculator (working directory) and its origin remote https://github.com/ddinkov10/fwrh_calculator.git — private repo, so confidential material may be committed/pushed here, but secrets and sensitive data are never cleared by visibility alone",
       "**Org-specific CLIs**: None configured"
     ]
-  },
-  "voiceEnabled": true
+  }
 }
