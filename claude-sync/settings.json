@@ -307,7 +307,8 @@
     "celetis": {
       "source": {
         "source": "github",
-        "repo": "ddinkov10/celetis"
+        "repo": "ddinkov10/celetis",
+        "ref": "feat/140-the-board-queues-several"
       }
     }
   },
