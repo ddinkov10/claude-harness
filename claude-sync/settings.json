@@ -107,6 +107,16 @@
             "timeout": 10
           }
         ]
+      },
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/dinq/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
       }
     ],
     "UserPromptSubmit": [
@@ -307,8 +317,7 @@
     "celetis": {
       "source": {
         "source": "github",
-        "repo": "ddinkov10/celetis",
-        "ref": "feat/140-the-board-queues-several"
+        "repo": "ddinkov10/celetis"
       }
     }
   },
