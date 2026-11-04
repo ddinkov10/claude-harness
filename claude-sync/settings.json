@@ -294,7 +294,7 @@
     "command": "node ${CLAUDE_CONFIG_DIR:-$HOME/.claude}/statusline/statusline.mjs"
   },
   "enabledPlugins": {
-    "playwright@claude-plugins-official": true,
+    "playwright@claude-plugins-official": false,
     "context7@claude-plugins-official": true,
     "dinq-harness@dinq": false,
     "superpowers@superpowers-marketplace": true,
@@ -358,6 +358,7 @@
   },
   "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
+  "idleCompaction": false,
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
   "autoMode": {
@@ -395,6 +396,5 @@
       "**Org-specific CLIs**: None configured"
     ]
   },
-  "voiceEnabled": true,
-  "idleCompaction": false
+  "voiceEnabled": true
 }
