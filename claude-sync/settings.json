@@ -170,6 +170,28 @@
             "timeout": 10
           }
         ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"try{const os=require('os'),p=require('path');const d=process.env.CLAUDE_CONFIG_DIR||p.join(os.homedir(),'.claude');process.stdout.write(JSON.stringify({hookSpecificOutput:{hookEventName:'SubagentStart',additionalContext:require('fs').readFileSync(p.join(d,'professional-mode.md'),'utf8')}}))}catch(e){}\"",
+            "timeout": 5,
+            "statusMessage": "Loading professional mode"
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"try{const os=require('os'),p=require('path');const d=process.env.CLAUDE_CONFIG_DIR||p.join(os.homedir(),'.claude');process.stdout.write(JSON.stringify({hookSpecificOutput:{hookEventName:'SubagentStart',additionalContext:require('fs').readFileSync(p.join(d,'superdinq-mode.md'),'utf8')}}))}catch(e){}\"",
+            "timeout": 5,
+            "statusMessage": "Loading superdinq mode"
+          }
+        ]
       }
     ],
     "SubagentStop": [
