@@ -7,5 +7,16 @@
     "command": "npx",
     "env": {},
     "type": "stdio"
+  },
+  "playwright": {
+    "args": [
+      "-y",
+      "@playwright/mcp@0.0.85",
+      "--isolated",
+      "--headless"
+    ],
+    "command": "npx",
+    "env": {},
+    "type": "stdio"
   }
 }
