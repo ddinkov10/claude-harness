@@ -18,5 +18,15 @@
     "command": "npx",
     "env": {},
     "type": "stdio"
+  },
+  "playwright-window": {
+    "args": [
+      "-y",
+      "@playwright/mcp@latest",
+      "--isolated"
+    ],
+    "command": "npx",
+    "env": {},
+    "type": "stdio"
   }
 }
