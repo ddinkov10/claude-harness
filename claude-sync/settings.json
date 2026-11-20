@@ -353,7 +353,8 @@
     "celetis": {
       "source": {
         "source": "github",
-        "repo": "ddinkov10/celetis"
+        "repo": "ddinkov10/celetis",
+        "ref": "v0.0.1"
       }
     }
   },
