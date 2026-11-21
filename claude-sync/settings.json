@@ -322,7 +322,8 @@
     "dinq-harness@dinq": false,
     "superpowers@superpowers-marketplace": true,
     "visual-explainer@visual-explainer-marketplace": true,
-    "celetis@celetis": true
+    "celetis@celetis": true,
+    "modern-web-guidance@googlechrome": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -355,6 +356,12 @@
         "source": "github",
         "repo": "ddinkov10/celetis",
         "ref": "v0.0.1"
+      }
+    },
+    "googlechrome": {
+      "source": {
+        "source": "github",
+        "repo": "GoogleChrome/modern-web-guidance"
       }
     }
   },
