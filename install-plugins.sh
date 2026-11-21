@@ -15,6 +15,7 @@ command -v claude >/dev/null || { echo "error: claude CLI is required" >&2; exit
 
 # extraKnownMarketplaces in settings.json is declarative only; the CLI needs
 # `marketplace add` to actually fetch and cache each one before installs work.
+# The source must carry the entry's ref, or the CLI refuses it as a mismatch.
 echo "== Marketplaces =="
 while IFS= read -r repo; do
     repo="${repo%$'\r'}" # native jq.exe emits CRLF on Windows
@@ -22,7 +23,7 @@ while IFS= read -r repo; do
     if ! claude plugin marketplace add "$repo"; then
         echo "warning: could not add marketplace $repo" >&2
     fi
-done < <(jq -r '.extraKnownMarketplaces // {} | to_entries[] | .value.source.repo' "$SETTINGS")
+done < <(jq -r '.extraKnownMarketplaces // {} | to_entries[] | .value.source | .repo + (if .ref then "#" + .ref else "" end)' "$SETTINGS")
 
 echo "== Plugins =="
 while IFS= read -r plugin; do
