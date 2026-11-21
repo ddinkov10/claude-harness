@@ -392,6 +392,7 @@
   },
   "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
+  "preferredNotifChannel": "auto",
   "idleCompaction": false,
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
