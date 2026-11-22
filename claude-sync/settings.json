@@ -355,7 +355,7 @@
       "source": {
         "source": "github",
         "repo": "ddinkov10/celetis",
-        "ref": "v0.0.1"
+        "ref": "main"
       }
     },
     "googlechrome": {
